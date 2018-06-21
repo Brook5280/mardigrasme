@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @location.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @location.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @location.state %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
+
+<p> Your Latitude:   
+	<span id="Lat"><%= @location.latitude %></span>
+</p>
+<p>Your Longitude:
+<span id="Long"> <%= @location.longitude %> </span>
+</p>
+
+<div id="map"></div>
+<p>This is the where page</p>

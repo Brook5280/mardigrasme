@@ -34,6 +34,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
+gem 'geocoder', '~> 1.3', '>= 1.3.7'
 
 #for Heroku
 group :production do

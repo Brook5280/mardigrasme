@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get "whereyat" => "map#where"
+  resources :locations
+  # get "whereyat" => "map#where"
+  get "whereyat" => "locations#index"
   get "riderprofile" => "riders#index"
+  get "newlocation" => "locations#new"
 
   resources :riders
   devise_for :users
