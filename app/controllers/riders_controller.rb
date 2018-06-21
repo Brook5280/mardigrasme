@@ -17,6 +17,7 @@ class RidersController < ApplicationController
   # GET /riders/new
   def new
     @rider = Rider.new
+
   end
 
   # GET /riders/1/edit
@@ -71,6 +72,6 @@ class RidersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rider_params
-      params.require(:rider).permit(:parade, :float, :side, :level, :position, :userid)
+      params.require(:rider).permit(:parade, :float, :side, :level, :position, :userid )
     end
 end

@@ -35,11 +35,15 @@
     <%= form.label :position %>
     <%= form.number_field :position, id: :rider_position %>
   </div>
-
-  <div class="field">
-    <%= form.label :userid %>
-    <%= form.number_field :userid, id: :rider_userid %>
-  </div>
+  
+<!-- Why doesn't this work? 
+ -->  <div>
+    <% if(current_user.id != nil) %>
+    <p>Not nil</p>
+      <%= form.hidden_field :userid, value: current_user.id %>
+    <% else %>
+    <p>Get the id</p>
+    <% end %>
 
   <div class="actions">
     <%= form.submit %>
